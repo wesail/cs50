@@ -3,6 +3,12 @@
 #include <stdlib.h>
 
 /******************************************************************
+ *学完了数组和指针，尝试用循环的方法解决汉诺塔问题，想了很久，只总结了一点移动的
+ *规律。对我来说， 这个问题验证了一点：在编程中，代码实现只占了很小一部分，更重要
+ *的是逻辑上理清楚。
+ *
+ *2016/11/7
+ *
  *循环解决汉诺塔问题                                             
  * 对于汉诺塔问题：                                              
  *    #                                                           
@@ -13,7 +19,7 @@
  * 
  * A作为起始柱子， B作为目标柱子（也可以是C，不影响问题）
  * 
- * 使用递归是简单而方便实现的，但循环就非常繁琐。
+ * 使用递归是简单而方便的，但循环就非常繁琐。
  * 
  * 用循环实现有以下的问题：
  * 1、循环次数最大为 2^n - 1， N为盘子数目
@@ -317,7 +323,7 @@ int * getaddr(int *A, int * B, int *C, int n)
  * 除非柱子为空
  * 
  */
-void move(int *A, int * B, int *C, int *moveN)
+void move(int *A, int *B, int *C, int *moveN)
 {
     // 函数圆形
     int * getaddr(int *A, int * B, int *C, int n);
@@ -350,7 +356,7 @@ void move(int *A, int * B, int *C, int *moveN)
     return;
 }
 
-// 打印当前状态
+// 打印移动动作
 void printStep(int *A, int * B, int *C, int *moveN)
 {
     char start, goal;
